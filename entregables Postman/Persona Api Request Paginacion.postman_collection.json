@@ -1,0 +1,582 @@
+{
+	"info": {
+		"_postman_id": "e14ca415-9e13-4bdd-9673-5d718ba85f15",
+		"name": "Persona Api Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30203598"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Agustina\",\r\n    \"apellido\": \"Linares\",\r\n    \"dni\": 48693550,\r\n    \"domicilio\": {\r\n        \"calle\": \"Maipú\",\r\n        \"numero\": 328,\r\n        \"localidad\": {\r\n            \"id\":1,\r\n            \"denominacion\": \"Capital\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"El espejo africano\",\r\n            \"fecha\": 2008,\r\n            \"genero\": \"ficción\",\r\n            \"paginas\": 343,\r\n            \"autores\": [\r\n                {\r\n                    \"id\":1,\r\n                    \"nombre\":\"Liliana\",\r\n                    \"apellido\":\"Bodoc\",\r\n                    \"biografia\":\"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\r\n\r\n                }\r\n            ]\r\n        }\r\n    ] \r\n\r\n\r\n}\r\n    \r\n    \r\n    \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/search?filtro=g",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "g"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "buscar personas con la letra g",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/personas/search?filtro=g",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"search"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "g"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 07 Oct 2023 15:46:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Agustina\",\n        \"apellido\": \"Linares\",\n        \"dni\": 48693550,\n        \"domicilio\": {\n            \"id\": 1,\n            \"calle\": \"Maipú\",\n            \"numero\": 328,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Capital\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 1,\n                \"titulo\": \"El espejo africano\",\n                \"fecha\": 2008,\n                \"genero\": \"ficción\",\n                \"paginas\": 343,\n                \"autores\": [\n                    {\n                        \"id\": 1,\n                        \"nombre\": \"Liliana\",\n                        \"apellido\": \"Bodoc\",\n                        \"biografia\": \"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/paged?page=0&size=5&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ALL PAGED example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/personas/paged?page=0&size=5&sort=id,desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"paged"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "id,desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 07 Oct 2023 15:51:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"nombre\": \"Dolores\",\n            \"apellido\": \"Jadur\",\n            \"dni\": 45024641,\n            \"domicilio\": {\n                \"id\": 2,\n                \"calle\": \"Maipú\",\n                \"numero\": 328,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Capital\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 2,\n                    \"titulo\": \"El espejo africano\",\n                    \"fecha\": 2008,\n                    \"genero\": \"ficción\",\n                    \"paginas\": 343,\n                    \"autores\": [\n                        {\n                            \"id\": 1,\n                            \"nombre\": \"Liliana\",\n                            \"apellido\": \"Bodoc\",\n                            \"biografia\": \"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 1,\n            \"nombre\": \"Agustina\",\n            \"apellido\": \"Linares\",\n            \"dni\": 48693550,\n            \"domicilio\": {\n                \"id\": 1,\n                \"calle\": \"Maipú\",\n                \"numero\": 328,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Capital\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 1,\n                    \"titulo\": \"El espejo africano\",\n                    \"fecha\": 2008,\n                    \"genero\": \"ficción\",\n                    \"paginas\": 343,\n                    \"autores\": [\n                        {\n                            \"id\": 1,\n                            \"nombre\": \"Liliana\",\n                            \"apellido\": \"Bodoc\",\n                            \"biografia\": \"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 2,\n    \"totalPages\": 1,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/searchPaged?filtro=a&page=0&size=5&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "a"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SEARCH PAGED example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/personas/searchPaged?filtro=a&page=0&size=5&sort=id,asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"searchPaged"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "a"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "id,asc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 07 Oct 2023 15:56:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Agustina\",\n            \"apellido\": \"Linares\",\n            \"dni\": 48693550,\n            \"domicilio\": {\n                \"id\": 1,\n                \"calle\": \"Maipú\",\n                \"numero\": 328,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Capital\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 1,\n                    \"titulo\": \"El espejo africano\",\n                    \"fecha\": 2008,\n                    \"genero\": \"ficción\",\n                    \"paginas\": 343,\n                    \"autores\": [\n                        {\n                            \"id\": 1,\n                            \"nombre\": \"Liliana\",\n                            \"apellido\": \"Bodoc\",\n                            \"biografia\": \"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"nombre\": \"Dolores\",\n            \"apellido\": \"Jadur\",\n            \"dni\": 45024641,\n            \"domicilio\": {\n                \"id\": 2,\n                \"calle\": \"Maipú\",\n                \"numero\": 328,\n                \"localidad\": {\n                    \"id\": 1,\n                    \"denominacion\": \"Capital\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 2,\n                    \"titulo\": \"El espejo africano\",\n                    \"fecha\": 2008,\n                    \"genero\": \"ficción\",\n                    \"paginas\": 343,\n                    \"autores\": [\n                        {\n                            \"id\": 1,\n                            \"nombre\": \"Liliana\",\n                            \"apellido\": \"Bodoc\",\n                            \"biografia\": \"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 2,\n    \"totalPages\": 1,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Liliana\",\r\n                    \"apellido\":\"Bodoc\",\r\n                    \"biografia\":\"Liliana Chiavetta, mejor conocida como Liliana Bodoc, ​ fue una escritora y poeta argentina que se especializó en literatura juvenil e adulta.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Capital\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/localidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
